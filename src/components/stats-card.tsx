@@ -1,4 +1,5 @@
 import { type LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface StatsCardProps {
   title: string;
@@ -8,15 +9,14 @@ interface StatsCardProps {
 
 export function StatsCard({ title, count, icon: Icon }: StatsCardProps) {
   return (
-    <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000"></div>
-      <div className="relative hexagon bg-white/10 backdrop-blur-sm p-8 rounded-lg flex flex-col items-center justify-center gap-4 transition duration-200 group-hover:transform group-hover:scale-105">
-        <Icon className="w-10 h-10 text-white" />
-        <h3 className="text-lg font-semibold text-white text-center">
-          {title}
-        </h3>
-        <p className="text-sm text-purple-200">{count}</p>
-      </div>
-    </div>
+    <motion.div
+      className="bg-white border border-[#395b99] p-6 rounded-lg flex flex-col items-center gap-4"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Icon className="w-10 h-10 text-gray-600" />
+      <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+      <p className="text-sm text-gray-600">{count}</p>
+    </motion.div>
   );
 }
