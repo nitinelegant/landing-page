@@ -21,7 +21,7 @@ export default function FeatureCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay * 0.1 }}
-      className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white p-6 rounded-xl   transition-shadow duration-300 outline outline-1 outline-gray-200"
     >
       <div className="flex flex-col items-center text-center">
         <div className="p-3 bg-[#ebeef4] rounded-full mb-4">

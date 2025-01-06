@@ -53,7 +53,7 @@ export default function CountdownTimer() {
           transition={{ delay: index * 0.1 }}
           className="flex flex-col items-center"
         >
-          <div className="bg-white w-16 sm:w-20 h-16 sm:h-20 rounded-lg shadow-md flex items-center justify-center mb-2">
+          <div className=" w-16 sm:w-28 h-16 sm:h-28 rounded-lg bg-[#f5f5f5] flex items-center justify-center mb-2">
             <span className="text-2xl sm:text-3xl font-bold text-[#0a0b3b]">
               {String(block.value).padStart(2, "0")}
             </span>
