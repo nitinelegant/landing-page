@@ -34,7 +34,7 @@ export default function Countdown() {
           ].map(({ label, value }) => (
             <motion.div
               key={label}
-              className="w-32 h-32 bg-white/10 backdrop-blur-lg rounded-2xl flex flex-col items-center justify-center bg-white border border-[#395b99]"
+              className="w-32 h-32 bg-white/10 backdrop-blur-lg rounded-2xl flex flex-col items-center justify-center bg-white border border-[#0a0b3b]"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -44,12 +44,12 @@ export default function Countdown() {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
-                  className="text-4xl md:text-5xl font-bold text-[#395b99]"
+                  className="text-4xl md:text-5xl font-bold text-[#0a0b3b]"
                 >
                   {padNumber(value)}
                 </motion.span>
               </AnimatePresence>
-              <span className="text-sm text-[#395b99]/80 mt-2">{label}</span>
+              <span className="text-sm text-[#0a0b3b]/80 mt-2">{label}</span>
             </motion.div>
           ))}
         </div>
@@ -61,9 +61,9 @@ export default function Countdown() {
           className="mt-12"
         >
           <div className="flex flex-col items-center space-y-4">
-            <div className="w-24 h-1 bg-white/20 rounded-full overflow-hidden">
+            <div className="w-24 h-1 bg-primary/20 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-white"
+                className="h-full bg-primary"
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{
@@ -73,33 +73,9 @@ export default function Countdown() {
                 }}
               />
             </div>
-            <p className="text-white text-lg">Get ready for the reveal</p>
           </div>
         </motion.div>
       </motion.div>
-
-      {/* Background Animation */}
-      {/* <div className="fixed inset-0 -z-10">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-[#395b99] rounded-full"
-            initial={{
-              x: Math.random() * 100 + "%",
-              y: Math.random() * 100 + "%",
-            }}
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </div> */}
     </div>
   );
 }
