@@ -32,7 +32,7 @@ export default function Home() {
           <div>
             <div className="  text-center relative z-10">
               <motion.h1
-                className="text-2xl sm:text-3xl md:text-8xl  mb-4 md:mb-8 text-[#0a0b3b] leading-tight"
+                className="text-3xl sm:text-3xl md:text-8xl  mb-4 md:mb-8 text-[#0a0b3b] leading-tight"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
